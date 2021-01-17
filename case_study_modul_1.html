@@ -5,33 +5,94 @@
     <title>Title</title>
 </head>
 <style>
-   *{
-       background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Pc9zvjxg9OAWoE07w5L_2nLbx0VpRaDFKQ&usqp=CAU");
-   }
-   input,button{
-       background: white;
-       padding: 5px 20px;
-   }
-   fieldset,legend,p{
-       background: white;
+    table{
+        width: 100%;
+        padding-top: 10px;
+    }
+    input,button{
+        background: white;
+        padding: 5px 20px;
+    }
+    fieldset,legend,p{
+        background: white;
 
-   }
+    }
 </style>
-<body>
-<h1>Pro Teamfight Tatics </h1>
+<h1>Teamfight Tactics - TFT</h1>
 <form>
     <fieldset>
-        <legend>
-            <p>Add Legend </p>
-        </legend>
-        <input type="text" placeholder="Người Chơi">
-        <input type="text" placeholder="Điểm ">
-        <input type="text" placeholder="Rank ">
-        <input type="text" placeholder=" Số Trận Top 1">
-        <button> Thêm Vào</button>
+        <legend>Add Employee</legend>
+        <input type="text" id="ingame" placeholder="Tên Ingame">
+        <input type="text" id="sum_number" placeholder="Tổng Số ">
+        <input type="text" id="point" placeholder="Điểm">
+        <input type="text" id="ratio" placeholder="Tỉ Lệ ">
+        <input type="text" id="img" placeholder="Input employee img...">
+        <button class="address" type="button" onclick="addPlayer()">Add</button>
+        <button type="button" onclick="updatePlayer()">Update</button>
     </fieldset>
 </form>
-</body>
-<table id="Lienminh" border="1px,solid">
+<body>
+<table id="management" border="1px solid">
 </table>
+<script>
+    let current = -1;
+    let manage = []
+
+    function display() {
+        let str = `<tr>
+             <th>STT</th>
+            <th>Tên Ingame</th>
+            <th>Tổng Số</th>
+            <th>Điểm</th>
+            <th>Tỉ Lệ</th>
+            <th>Img</th>
+            <th colspan='2'>Action</th>
+            </tr>`;
+        for (let i = 0; i < manage.length; i++) {
+            str += `<tr>
+                               <td>${i + 1}</td>
+                            <td>${manage[i][0]}</td>
+                            <td>${manage[i][1]}</td>
+                            <td>${manage[i][2]}</td>
+                            <td>${manage[i][3]}</td>
+                            <td><img src="${manage[i][4]}"></td>
+                            <td><button  class="update" onclick="editPlayer(${i})">Update</button></td>
+                            <td><button class="delete" onclick="deletePlayer(${i})">Delete</button></td>
+</tr>`;
+        }
+        document.getElementById("manage").innerHTML = str;
+    }
+
+    display();
+
+    function addPlayer() {
+        let ingame = document.getElementById('ingame').value;
+        let sumNumber = document.getElementById('sum_number').value;
+        let point = document.getElementById('point').value;
+        let ration = document.getElementById('ratio').value;
+        let img = document.getElementById('img').value;
+        if (ingame != "" && sumNumber != "" && point != "" && ration != "") {
+            let player = [ingame, sumNumber, point, ration, img];
+            manage.push(player);
+            display();
+            resetInput();
+        } else {
+            alert("Please input name");
+        }
+    }
+    function updatePlayer() {
+        let ingame = document.getElementById('ingame').value;
+        let sumNumber = document.getElementById('sum_number').value;
+        let point = document.getElementById('point').value;
+        let ration = document.getElementById('ratio').value;
+        let img = document.getElementById('img').value;
+        if (ingame != "" && sumNumber != "" && point != "" && ration != "") {
+            let player = [ingame, sumNumber, point, ration, img];
+            manage[current] = player;
+            display();
+            resetInput();
+        }
+    }
+</script>
+</body>
 </html>
