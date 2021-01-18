@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script src="BXH.js"></script>
 </head>
 <style>
     table{
@@ -21,21 +23,19 @@
 <h1>Teamfight Tactics - TFT</h1>
 <form>
     <fieldset>
-        <legend>Add Employee</legend>
-        <input type="text" id="ingame" placeholder="Tên Ingame">
-        <input type="text" id="sum_number" placeholder="Tổng Số ">
-        <input type="text" id="point" placeholder="Điểm">
-        <input type="text" id="ratio" placeholder="Tỉ Lệ ">
-        <input type="text" id="img" placeholder="Input employee img...">
+        <legend>Add Player</legend>
+        <input type="text" id="gamer-game" placeholder="Tên game">
+        <input type="text" id="gamer-number" placeholder="Tổng Số ">
+        <input type="text" id="gamer-point" placeholder="Điểm">
+        <input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
+        <input type="text" id="gamer-img" placeholder="Input employee img...">
         <button class="address" type="button" onclick="addPlayer()">Add</button>
         <button type="button" onclick="updatePlayer()">Update</button>
     </fieldset>
 </form>
 <body>
-<table id="management" border="1px solid">
+<table id="manage" border="1px solid">
 </table>
-<script>
-   
-</script>
+<script src="manage.js"></script>
 </body>
 </html>
