@@ -5,7 +5,6 @@ class BXH {
         this._point = point;
         this._ratio = ratio;
         this._image = image;
-
     }
 
     get game() {

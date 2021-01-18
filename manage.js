@@ -2,7 +2,7 @@ let manage = [['Ncc', '1111', '27%', '222']];
 
 function display() {
     let str = `<tr>
-            <th>STT</th>
+            <th>#</th>
             <th>Game</th>
             <th>Number</th>
             <th>Point</th>
@@ -54,6 +54,7 @@ function updatePlayer() {
         let player = [game, number, point, ratio, image];
         manage[current] = player;
         display();
+        resetBXh();
     }
 }
 
@@ -64,4 +65,23 @@ function editPlayer(index) {
     document.getElementById('gamer-ratio').value=manage[index][3]
     document.getElementById('gamer-img').value=manage[index][4];
     current=index;
+}
+function deletePlayer(index){
+   let check=confirm('Bạn có muốn Xoá không');
+    if(check){
+        manage.splice(index,1);
+        display()
+    }
+}
+function resetBXh(){
+    document.getElementById('gamer-game').value="";
+    document.getElementById('gamer-number').value="";
+    document.getElementById('gamer-point').value="";
+    document.getElementById('gamer-ratio').value="";
+    document.getElementById('gamer-img').value="";
+}
+function searchh(){
+    let search= document.getElementById('searchh').value;
+    for (let i=manage.length)
+    if (search==manage)
 }
