@@ -35,64 +35,7 @@
 <table id="management" border="1px solid">
 </table>
 <script>
-    let current = -1;
-    let manage = []
-
-    function display() {
-        let str = `<tr>
-             <th>STT</th>
-            <th>Tên Ingame</th>
-            <th>Tổng Số</th>
-            <th>Điểm</th>
-            <th>Tỉ Lệ</th>
-            <th>Img</th>
-            <th colspan='2'>Action</th>
-            </tr>`;
-        for (let i = 0; i < manage.length; i++) {
-            str += `<tr>
-                               <td>${i + 1}</td>
-                            <td>${manage[i][0]}</td>
-                            <td>${manage[i][1]}</td>
-                            <td>${manage[i][2]}</td>
-                            <td>${manage[i][3]}</td>
-                            <td><img src="${manage[i][4]}"></td>
-                            <td><button  class="update" onclick="editPlayer(${i})">Update</button></td>
-                            <td><button class="delete" onclick="deletePlayer(${i})">Delete</button></td>
-</tr>`;
-        }
-        document.getElementById("manage").innerHTML = str;
-    }
-
-    display();
-
-    function addPlayer() {
-        let ingame = document.getElementById('ingame').value;
-        let sumNumber = document.getElementById('sum_number').value;
-        let point = document.getElementById('point').value;
-        let ration = document.getElementById('ratio').value;
-        let img = document.getElementById('img').value;
-        if (ingame != "" && sumNumber != "" && point != "" && ration != "") {
-            let player = [ingame, sumNumber, point, ration, img];
-            manage.push(player);
-            display();
-            resetInput();
-        } else {
-            alert("Please input name");
-        }
-    }
-    function updatePlayer() {
-        let ingame = document.getElementById('ingame').value;
-        let sumNumber = document.getElementById('sum_number').value;
-        let point = document.getElementById('point').value;
-        let ration = document.getElementById('ratio').value;
-        let img = document.getElementById('img').value;
-        if (ingame != "" && sumNumber != "" && point != "" && ration != "") {
-            let player = [ingame, sumNumber, point, ration, img];
-            manage[current] = player;
-            display();
-            resetInput();
-        }
-    }
+   
 </script>
 </body>
 </html>
