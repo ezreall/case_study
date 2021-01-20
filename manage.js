@@ -1,12 +1,11 @@
-let manage = [['Ncc', '1111', '27%', '222']];
-
+let manage = loadData();
 function display() {
     let str = `<tr>
             <th>#</th>
-            <th>Game</th>
-            <th>Number</th>
-            <th>Point</th>
-            <th>Ratio</th>
+            <th>Tên</th>
+            <th>Điểm</th>
+            <th>Tỉ Lệ Tốp 1</th>
+            <th>Tổng Số Trận</th>
             <th>Image</th>
             <th colspan='2'>Action</th>
             </tr>`;
@@ -17,12 +16,13 @@ function display() {
                             <td>${manage[i][1]}</td>
                             <td>${manage[i][2]}</td>
                             <td>${manage[i][3]}</td>
-                            <td><image src="${manage[i][4]}"></td>
+                            <td><image src="${manage[i][4]}" style="width: 100px"></td>
                             <td><button  class="update" onclick="editPlayer(${i})">Update</button></td>
                             <td><button class="delete" onclick="deletePlayer(${i})">Delete</button></td>
 </tr>`;
     }
     document.getElementById("manage").innerHTML = str;
+    saveData();
 }
 
 display();
@@ -80,8 +80,15 @@ function resetBXh(){
     document.getElementById('gamer-ratio').value="";
     document.getElementById('gamer-img').value="";
 }
-function searchh(){
-    let search= document.getElementById('searchh').value;
-    for (let i=manage.length)
-    if (search==manage)
+function saveData(){
+    localStorage.setItem('gamer',JSON.stringify(manage));
+}
+function loadData(){
+    if (localStorage.hasOwnProperty('gamer')){
+        let data=JSON.parse(localStorage.getItem('gamer'));
+        return data;
+    }else {
+        return [];
+    }
+
 }

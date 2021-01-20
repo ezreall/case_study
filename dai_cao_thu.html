@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="BXH.js"></script>
+</head>
+<style>
+    table{
+        width: 100%;
+        padding-top: 10px;
+        border:none;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    input,button{
+        background: white;
+        padding: 5px 20px;
+    }
+    fieldset,legend,p{
+        background: white;
+    }
+    fieldset{
+        margin-bottom: 10px;
+    }
+    button{
+        margin-top: 10px;
+    }
+</style>
+<a href="link.html"><h1>Teamfight Tactics - TFT</h1></a>
+<form>
+    <fieldset>
+        <legend>Add Player</legend>
+        <input type="text" id="gamer-game" placeholder="Tên game">
+        <input type="text" id="gamer-number" placeholder="Tổng Số ">
+        <input type="text" id="gamer-point" placeholder="Điểm">
+        <input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
+        <input type="text" id="gamer-img" placeholder="IMG...">
+        <input type="search" id="search" placeholder="tìm kiếm" onclick="searchh()"><button onclick="">Tìm Kiếm </button>
+        <br>
+        <button class="address" type="button" onclick="addPlayer()">Add</button>
+        <button type="button" onclick="updatePlayer()">Update</button>
+    </fieldset>
+</form>
+<body>
+<table id="manage" border="1px solid">
+</table>
+<script src="manage.js"></script>
+</body>
+</html>
