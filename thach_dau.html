@@ -7,49 +7,123 @@
     <script src="BXH.js"></script>
 </head>
 <style>
-    table{
-        width: 100%;
+    body {
+        background-image: url("https://lienminh.garena.vn/images/Lan_h3lpm3/09_2020/nhatkytrangphuc/03_Aurelion_Sol_RESIZED_1.jpg");
+    }
+
+    table {
+        width: 60%;
         padding-top: 10px;
-        border:none;
+        border: none;
         text-align: center;
         border-collapse: collapse;
-
-
+        background: none;
+        margin-left: 270px;
     }
-    input,button{
+
+    input, button {
         background: white;
         padding: 5px 20px;
     }
-    fieldset,legend,p{
+
+    fieldset, legend, p {
         background: white;
     }
-    fieldset{
-        margin-bottom: 10px;
-    }
-    button{
-        margin-top: 10px;
-    }
-    a{
+    a {
         text-decoration: none;
+    }
+    h1{
+        color: rgb(234, 217, 145);
+    }
+    h3{
+        color: #CCFFCC;
+        font-size: 30px;
+        font-weight: bold ;
+    }
+    ul li{
+        list-style: none;
+        padding: 10px 20px;
+        width: 200px;
+        color: rgb(234, 217, 145);
+        font-size: 30px;
+        font-weight: bold;
+    }
+    ul li:hover{
+        font-family: Arial;
+        color: gold;
+    }
+    .to{
+        position: relative;
+    }
+    .nhap {
+        position: absolute;
+        z-index: 2;
+        top: 239px;
 
     }
-</style>
+    .adress{
+        margin-top: 47px;
+        margin-left: 617px;
+        width: 14%;
+    }
+    .add{
+        margin-left: 230px;
 
-<a href="link.html"><h1>Teamfight Tactics - TFT</h1></a>
-<form>
-    <fieldset>
-        <legend>Add Player</legend>
-        <input type="text" id="gamer-game" placeholder="Tên game">
-        <input type="text" id="gamer-number" placeholder="Tổng Số ">
-        <input type="text" id="gamer-point" placeholder="Điểm">
-        <input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
-        <input type="text" id="gamer-img" placeholder="IMG...">
-        <input type="search" id="search" placeholder="tìm kiếm" onclick="searchh()"><button onclick="">Tìm Kiếm </button>
+    }
+    img{
+        margin-left: 90px;
+    }
+    .click{
+        margin-left: 89px;
+        margin-top: 18px;
+    }
+    .seachs,.yes{
+        width: 147px;
+        padding: 10px;
+        background: none;
+        color: #161D26;
+
+    }
+    .yes{
+        margin-top: 5px;
+    }
+    .add,input{
+        background: none;
+        border: none;
+        border-radius: 10px;
+        color: white;
+    }
+    .adress,button{
+        border-radius: 5px;
+        background: none;
+        color: gainsboro;
+        border: none;
+    }
+
+
+
+</style>
+<ul>
+    <a href="Link.html"> <li>Teamfight Tactics - TFT</li></a>
+</ul>
+<div class="nhap">
+    <div class="add">
+<input type="text" id="gamer-game" placeholder="Tên game">
+<input type="text" id="gamer-number" placeholder="Tổng Số ">
+<input type="text" id="gamer-point" placeholder="Điểm">
+<input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
+<input type="text" id="gamer-img" placeholder="IMG...">
+    </div>
+    <div class="adress">
+<button  type="button" onclick="addPlayer()">Add</button>
+<button type="button" onclick="updatePlayer()">Update</button>
+    </div>
+    <div class="click">
+<input class="seachs" type="search" id="search" placeholder="tìm kiếm" onclick="searchh()">
         <br>
-        <button class="address" type="button" onclick="addPlayer()">Add</button>
-        <button type="button" onclick="updatePlayer()">Update</button>
-    </fieldset>
-</form>
+<button class="yes" onclick="">Tìm Kiếm</button></div>
+</div>
+<img class="to" src="sprite.png" alt="">
 <body>
 <table id="manage" border="1px solid">
 </table>
