@@ -120,19 +120,33 @@
         background: #161D26;
     }
 
+    input {
+        background: none;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
+    .menu {
+        box-sizing: border-box;
+    }
+
 
 </style>
+
 <ul>
     <a href="Link.html">
         <li>Teamfight Tactics - TFT</li>
     </a>
 </ul>
+
 <div class="nhap">
     <div class="add">
         <input type="text" id="gamer-game" placeholder="Tên game">
         <input type="text" id="gamer-number" placeholder="Tổng Số ">
         <input type="text" id="gamer-point" placeholder="Điểm">
-        <input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
+        <input type="text" id="gamer-ratio" placeholder="Tổng Số Trận ">
         <input type="text" id="gamer-img" placeholder="IMG...">
     </div>
     <div class="adress">
@@ -140,9 +154,7 @@
         <button type="button" onclick="updatePlayer()">Update</button>
     </div>
     <div class="click">
-        <input class="seachs" type="search" id="search" placeholder="tìm kiếm" onclick="searchh()">
-        <br>
-        <button class="yes" onclick="">Tìm Kiếm</button>
+        <input class="seachs" type="search" onkeyup="myFunction()" id="myInput" placeholder="tìm kiếm">
     </div>
 </div>
 <img class="to" src="sprite.png" alt="">

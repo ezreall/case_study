@@ -26,21 +26,22 @@
         padding: 5px 20px;
     }
 
-    fieldset, legend, p {
-        background: white;
-    }
+
     a {
         text-decoration: none;
     }
-    h1{
+
+    h1 {
         color: rgb(234, 217, 145);
     }
-    h3{
+
+    h3 {
         color: #CCFFCC;
         font-size: 30px;
-        font-weight: bold ;
+        font-weight: bold;
     }
-    ul li{
+
+    ul li {
         list-style: none;
         padding: 10px 20px;
         width: 200px;
@@ -48,80 +49,105 @@
         font-size: 30px;
         font-weight: bold;
     }
-    ul li:hover{
+
+    ul li:hover {
         font-family: Arial;
         color: gold;
     }
-    .to{
+
+    .to {
         position: relative;
     }
+
     .nhap {
         position: absolute;
         z-index: 2;
         top: 239px;
 
     }
-    .adress{
-        margin-top: 47px;
-        margin-left: 617px;
-        width: 14%;
+
+    .adress {
+        margin-top: 43px;
+        margin-left: 600px;
+        width: 20%;
     }
-    .add{
+
+    .add {
         margin-left: 230px;
 
     }
-    img{
+
+    img {
         margin-left: 90px;
     }
-    .click{
+
+    .click {
         margin-left: 89px;
         margin-top: 18px;
     }
-    .seachs,.yes{
+
+    .seachs, .yes {
         width: 147px;
         padding: 10px;
         background: none;
         color: #161D26;
 
     }
-    .yes{
-        margin-top: 5px;
-    }
-    .add,input{
+
+
+    .add, input {
         background: none;
         border: none;
         border-radius: 10px;
         color: white;
     }
-    .adress,button{
+
+    .adress, button {
         border-radius: 5px;
         background: none;
         color: gainsboro;
         border: none;
     }
 
+    tr td button {
+        background: #161D26;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
+    input {
+        background: none;
+    }
+
+    button {
+        font-weight: bold;
+        font-size: 20px;
+    }
 
 
 </style>
 <ul>
-    <a href="Link.html"> <li>Teamfight Tactics - TFT</li></a>
+    <a href="Link.html">
+        <li>Teamfight Tactics - TFT</li>
+    </a>
 </ul>
 <div class="nhap">
     <div class="add">
-<input type="text" id="gamer-game" placeholder="Tên game">
-<input type="text" id="gamer-number" placeholder="Tổng Số ">
-<input type="text" id="gamer-point" placeholder="Điểm">
-<input type="text" id="gamer-ratio" placeholder="Tỉ Lệ ">
-<input type="text" id="gamer-img" placeholder="IMG...">
+        <input type="text" id="gamer-game" placeholder="Tên game">
+        <input type="text" id="gamer-number" placeholder="Điểm ">
+        <input type="text" id="gamer-point" placeholder="Tỉ Lệ Tốp 1">
+        <input type="text" id="gamer-ratio" placeholder="Tổng Số Trận ">
+        <input type="text" id="gamer-img" placeholder="IMG...">
     </div>
     <div class="adress">
-<button  type="button" onclick="addPlayer()">Add</button>
-<button type="button" onclick="updatePlayer()">Update</button>
+        <button type="button" onclick="addPlayer()">ADD</button>
+        <button type="button" onclick="updatePlayer()">UPDATE</button>
     </div>
     <div class="click">
-<input class="seachs" type="search" id="search" placeholder="tìm kiếm" onclick="searchh()">
-        <br>
-<button class="yes" onclick="">Tìm Kiếm</button></div>
+        <input class="seachs" type="search" onkeyup="myFunction()" id="myInput" placeholder="tìm kiếm">
+    </div>
 </div>
 <img class="to" src="sprite.png" alt="">
 <body>
