@@ -92,9 +92,9 @@ function loadData(){
     }
 
 }
-function myFunction() {
+function search() {
     let input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("clickInput");
     filter = input.value.toUpperCase();
     table = document.getElementById("manage");
     tr = table.getElementsByTagName("tr");
