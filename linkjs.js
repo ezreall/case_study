@@ -1,4 +1,4 @@
-let TD = [['Ncc', '1809', '18%','1000'],['Ncc', '1769', '18%','1019'],['Ncc', '1750', '20%','890']];
+let TD = [['Ncc', '1809', '18%','1000']];
 
 function higt() {
     let sum = `<tr>
@@ -22,7 +22,7 @@ function higt() {
 }
 
 higt();
-let DCT= [['', '1111', '18','']];
+let DCT= [['NS Kiss ', '1111', '18%','859']];
 
 function fit() {
     let avg= `<tr>
@@ -46,7 +46,7 @@ function fit() {
 }
 
 fit();
-let CT= [['', '1111', '18','']];
+let CT= [['Yushin', '1687', '18%','796']];
 function short() {
     let put= `<tr>
             <th>#</th>
